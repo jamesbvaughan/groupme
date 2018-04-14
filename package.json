@@ -1,0 +1,19 @@
+{
+  "name": "groupme",
+  "version": "1.0.0",
+  "description": "A cli GroupMe interface.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+  },
+  "keywords": [],
+  "author": "James Vaughan",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "dotenv": "^5.0.1",
+    "libnotify": "^1.0.4",
+    "node-fetch": "^2.1.2",
+    "ws": "^5.1.1"
+  }
+}
