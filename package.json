@@ -4,7 +4,7 @@
   "description": "A cli GroupMe interface.",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node main.js"
   },
   "keywords": [],
   "author": "James Vaughan",

@@ -16,9 +16,15 @@ class GroupMeAPIClient {
     return `https://api.groupme.com/v3${path}?` + qs.stringify(params)
   }
 
+  _debug(thing) {
+    console.log(thing)
+    process.exit(1)
+  }
+
   _fetch(path, params) {
     return fetch(this._apiURL(path, params))
       .then(res => res.json())
+      // .then(this._debug)
       .then(({ response }) => response)
       .catch(this._handleError)
   }

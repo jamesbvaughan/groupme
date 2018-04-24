@@ -7,12 +7,12 @@ class GroupMe {
     if (this.screen) {
       this.screen.destroy()
     }
-    console.error(err)
+    console.error('ERROR:', err)
     process.exit(1)
   }
 
   async run() {
-    const groupme = new GroupMeAPIClient(this._handleError)
+    const groupme = new GroupMeAPIClient(this._handleError.bind(this))
 
     const groups = await groupme.getGroups()
 
