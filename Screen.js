@@ -93,7 +93,14 @@ class Screen {
     if (message.name === 'GroupMe') {
       return `{green-fg}${message.text}{/green-fg}`
     }
-    return `{bold}${message.name}:{/bold} ${message.text}`
+    let nFavsString = '  '
+    if (message.favorited_by) {
+      const nFavs = message.favorited_by.length
+      nFavsString = nFavs == 0 ? '  '
+        : nFavs < 10 ? ` ${nFavs}`
+        : `${nFavs}`
+    }
+    return `${nFavsString} ♡ {bold}${message.name}:{/bold} ${message.text}`
   }
 
   selectGroup(group) {
